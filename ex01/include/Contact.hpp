@@ -23,6 +23,7 @@ class Contact
     public:
         Contact();
         ~Contact();
+        void print_coucou();
         // std::string get_firstname();
         // void set_firstname(std::string firstname);
 };

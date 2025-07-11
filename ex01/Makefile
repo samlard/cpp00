@@ -16,10 +16,10 @@ OBJ_DIR =       obj
 
 OBJ             =       $(SRC:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)
 
-INC_DIR =	phonebook
+INC_DIR =	include
 #---------------------------------------------------------#
 
-NAME    =	megaphone
+NAME    =	phonebook
 
 all:            $(NAME)
 

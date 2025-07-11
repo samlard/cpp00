@@ -11,10 +11,22 @@
 /* ************************************************************************** */
 
 #include "../include/Contact.hpp"
+#include "../include/PhoneBook.hpp"
+#include <string>
 
 int main(void)
 {
-    Contact test;
-    
+    std::string input;
+
+    while (getline(std::cin, input) && input != "EXIT")
+    {
+        if (std::string(input) == "EXIT")
+            break;
+        else if (std::string(input) == "ADD")
+        {
+            std::cout << "Adding a new contact..." << std::endl;
+        }
+    }
+    // Additional logic can be added here to interact with the PhoneBook and Contact classes
     return (0);
 }

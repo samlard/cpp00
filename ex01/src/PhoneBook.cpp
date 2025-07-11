@@ -11,11 +11,35 @@
 /* ************************************************************************** */
 
 #include "../include/PhoneBook.hpp"
+#include <iostream>
 
-PhoneBook::PhoneBook()
+PhoneBook::PhoneBook(int i) : max_contacts(i)
 {
-}
+    std::cout << "PhoneBook constructor called" << std::endl;
+    std::cout << "max = : " << this->max_contacts <<std::endl;
+    // Initialize any necessary members or resources here
+};
 
 PhoneBook::~PhoneBook()
 {
-}
+    std::cout << "phonebook destructor called" << std::endl;
+};
+
+void PhoneBook::set_max_contacts()
+{
+    int i;
+    std::cout << "Setting maximum contacts...";
+    std::cin >> i;
+    this->max_contacts = (int)i;
+};
+
+void PhoneBook::print_contacts()
+{
+    std::cout << "Printing max contacts: " << this->max_contacts << std::endl;
+    // Logic to print all contacts can be added here
+    // For example, iterating through a list of contacts and printing their details
+};
+
+
+
+

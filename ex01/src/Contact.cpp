@@ -23,8 +23,12 @@ Contact::~Contact()
      std::cout << "destru appele" << std::endl;
 };
 
+void Contact::print_coucou()
+{
+    std::cout << "coucou" << std::endl;
+};
+
 // std::string Contact::get_firstname ()
-// {
 //     return this->firstname;
 // }
 

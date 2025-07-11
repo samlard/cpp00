@@ -18,8 +18,14 @@ class PhoneBook
     private:
 
     public:
-        PhoneBook();
+    int max_contacts; // Maximum number of contacts in the phonebook
+        PhoneBook(int i);
         ~PhoneBook();
+        void create_repertory(int max_contacts);
+        void set_max_contacts();
+        void print_contacts(); // Function to print all contacts
+
+        
 };
 
 #endif
