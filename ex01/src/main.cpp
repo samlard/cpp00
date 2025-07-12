@@ -18,15 +18,18 @@ int main(void)
 {
     std::string input;
 
-    while (getline(std::cin, input) && input != "EXIT")
+    while (1)
     {
+        std::cout << "Enter a command (ADD, EXIT, SEARCH): ";
+        getline(std::cin, input) && input != "EXIT";
         if (std::string(input) == "EXIT")
             break;
         else if (std::string(input) == "ADD")
-        {
             std::cout << "Adding a new contact..." << std::endl;
-        }
+        else if (std::string(input) == "SEARCH")
+            std::cout << "searching a contact..." << std::endl;
+        else
+            std::cout << "Unknown command: " << input << std::endl;
     }
-    // Additional logic can be added here to interact with the PhoneBook and Contact classes
     return (0);
 }
