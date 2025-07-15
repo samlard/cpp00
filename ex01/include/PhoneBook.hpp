@@ -19,8 +19,8 @@
 class PhoneBook
 {
     private:
-        Contact *registry[1];
-        int nbr_contact;
+        Contact *registry[2];
+        int nbr_contact; // Number of contacts currently in the phonebook
 
     public:
         PhoneBook();

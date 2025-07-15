@@ -15,8 +15,9 @@
 
 PhoneBook::PhoneBook()
 {
-    std::cout << "PhoneBook has been created." << std::endl;
-    // Initialize any necessary members or resources here
+    for (int i = 0; i < 2; i++)
+        this->nbr_contact = 0; // Initialize the registry to nullptr
+    std::cout << "PhoneBook has been created with a capacity for "<< std::endl;
 };
 
 PhoneBook::~PhoneBook()
@@ -33,7 +34,7 @@ void PhoneBook::add_contact()
     new_contact.create_contact();
     if (!this->check_full())
     {
-        this->registry[nbr_contact] = new Contact(new_contact);
+        this->registry[nbr_contact] = &new_contact;
         this->nbr_contact++;
         std::cout << "Contact added successfully." << std::endl;
     }
@@ -41,9 +42,6 @@ void PhoneBook::add_contact()
     {
         std::cout << "PhoneBook is full. Cannot add more contacts." << std::endl;
     }
-
-    
-    
 };
 
 int PhoneBook::check_full()
