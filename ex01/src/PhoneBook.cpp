@@ -13,10 +13,9 @@
 #include "../include/PhoneBook.hpp"
 #include <iostream>
 
-PhoneBook::PhoneBook(int i) : max_contacts(i)
+PhoneBook::PhoneBook()
 {
-    std::cout << "PhoneBook constructor called" << std::endl;
-    std::cout << "max = : " << this->max_contacts <<std::endl;
+    std::cout << "PhoneBook has been created." << std::endl;
     // Initialize any necessary members or resources here
 };
 
@@ -25,20 +24,36 @@ PhoneBook::~PhoneBook()
     std::cout << "phonebook destructor called" << std::endl;
 };
 
-void PhoneBook::set_max_contacts()
+
+void PhoneBook::add_contact()
 {
-    int i;
-    std::cout << "Setting maximum contacts...";
-    std::cin >> i;
-    this->max_contacts = (int)i;
+    std::cout << "Adding a new contact..." << std::endl;
+    Contact new_contact;
+    
+    new_contact.create_contact();
+    if (!this->check_full())
+    {
+        this->registry[nbr_contact] = new Contact(new_contact);
+        this->nbr_contact++;
+        std::cout << "Contact added successfully." << std::endl;
+    }
+    else
+    {
+        std::cout << "PhoneBook is full. Cannot add more contacts." << std::endl;
+    }
+
+    
+    
 };
 
-void PhoneBook::print_contacts()
+int PhoneBook::check_full()
 {
-    std::cout << "Printing max contacts: " << this->max_contacts << std::endl;
-    // Logic to print all contacts can be added here
-    // For example, iterating through a list of contacts and printing their details
-};
+    if (nbr_contact >= 8)
+        return 1;
+    
+    else
+        return 0;
+}
 
 
 

@@ -12,20 +12,21 @@
 
 #ifndef PHONEBOOK_HPP
 # define PHONEBOOK_HPP
+#include "Contact.hpp"
+#include <iostream>
+#include <string>
 
 class PhoneBook
 {
     private:
+        Contact *registry[1];
+        int nbr_contact;
 
     public:
-    int max_contacts; // Maximum number of contacts in the phonebook
-        PhoneBook(int i);
+        PhoneBook();
         ~PhoneBook();
-        void create_repertory(int max_contacts);
-        void set_max_contacts();
-        void print_contacts(); // Function to print all contacts
-
-        
+        void add_contact(); // Function to add a contact
+        int check_full(); // Function to check if the phonebook is full
 };
 
 #endif

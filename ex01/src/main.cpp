@@ -16,6 +16,7 @@
 
 int main(void)
 {
+    PhoneBook phonebook;
     std::string input;
 
     while (1)
@@ -25,7 +26,7 @@ int main(void)
         if (std::string(input) == "EXIT")
             break;
         else if (std::string(input) == "ADD")
-            std::cout << "Adding a new contact..." << std::endl;
+            phonebook.add_contact();
         else if (std::string(input) == "SEARCH")
             std::cout << "searching a contact..." << std::endl;
         else

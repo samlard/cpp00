@@ -23,9 +23,20 @@ Contact::~Contact()
      std::cout << "destru appele" << std::endl;
 };
 
-void Contact::print_coucou()
+void Contact::create_contact()
 {
-    std::cout << "coucou" << std::endl;
+    std::cout << "firstname = " << std::endl;
+    getline(std::cin, this->firstname);
+    std::cout << "lastname = " << std::endl;
+    getline(std::cin, this->lastname);
+    std::cout << "nickname = " << std::endl;
+    getline(std::cin, this->nickname);
+    std::cout << "PhoneNumber = " << std::endl;
+    getline(std::cin, this->PhoneNumber);
+    std::cout << "DarkestSecret = " << std::endl;
+    getline(std::cin, this->DarkestSecret);
+    std::cout << "Contact created" << std::endl;
+
 };
 
 // std::string Contact::get_firstname ()
