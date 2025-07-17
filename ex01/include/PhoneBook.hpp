@@ -19,14 +19,15 @@
 class PhoneBook
 {
     private:
-        Contact *registry[2];
-        int nbr_contact; // Number of contacts currently in the phonebook
+        Contact registry[8];
+        int index; // Current index for adding contacts
 
     public:
         PhoneBook();
         ~PhoneBook();
         void add_contact(); // Function to add a contact
-        int check_full(); // Function to check if the phonebook is full
+        int get_index(); // Function to get the current index
+        void search_contacts(); // Function to search for contacts
 };
 
 #endif
