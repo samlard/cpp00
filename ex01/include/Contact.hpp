@@ -28,6 +28,9 @@ class Contact
         Contact();
         ~Contact();
        void create_contact();
+       std::string get_firstname() const;
+       std::string get_lastname() const;
+       std::string get_nickname() const;
 };
 
 #endif

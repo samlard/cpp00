@@ -39,6 +39,21 @@ void Contact::create_contact()
 
 };
 
+std::string Contact::get_firstname() const
+{
+    return this->firstname;
+}
+
+std::string Contact::get_lastname() const
+{
+    return this->lastname;
+}
+
+std::string Contact::get_nickname() const
+{
+    return this->nickname;
+}
+
 // std::string Contact::get_firstname ()
 //     return this->firstname;
 // }

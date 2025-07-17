@@ -53,8 +53,9 @@ void  PhoneBook::search_contacts()
     std::cout << "index     |first name|last name|nickname" << std::endl;
     for (int i = 0; i < this->index && i < 8; i++)
     {
+        
         std::cout << i << "         |" 
-                  << this->registry[i]. << "|"
+                  << this->registry[i].get_firstname() << "|"
                   << this->registry[i].get_lastname() << "|"
                   << this->registry[i].get_nickname() << "|" << std::endl;
         // Assuming Contact class has a method to display contact details
@@ -63,7 +64,5 @@ void  PhoneBook::search_contacts()
     if (this->index == 0)
         std::cout << "No contacts available." << std::endl;
 }
-
-
 
 
