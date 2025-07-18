@@ -16,27 +16,41 @@
 
 Contact::Contact()
 {
-    std::cout << "constru appele" << std::endl;
+    // std::cout << "constru appele" << std::endl;
 };
 
 Contact::~Contact()
 {
-     std::cout << "destru appele" << std::endl;
+    //  std::cout << "destru appele" << std::endl;
 };
 
 void Contact::create_contact()
 {
-    std::cout << "firstname = ";
-    getline(std::cin, this->firstname);
-    std::cout << "lastname = ";
-    getline(std::cin, this->lastname);
-    std::cout << "nickname = ";
-    getline(std::cin, this->nickname);
-    std::cout << "PhoneNumber = ";
-    getline(std::cin, this->PhoneNumber);
-    std::cout << "DarkestSecret = ";
-    getline(std::cin, this->DarkestSecret);
-    std::cout << "Contact created" << std::endl;
+    while (this->firstname.empty())
+    {
+        std::cout << "Enter first name: ";
+        std::getline(std::cin, this->firstname);
+    }
+    while (this->lastname.empty())
+    {
+        std::cout << "Enter last name: ";
+        std::getline(std::cin, this->lastname);
+    }
+    while (this->nickname.empty())
+    {
+        std::cout << "Enter nickname: ";
+        std::getline(std::cin, this->nickname);
+    }
+    while (this->PhoneNumber.empty())
+    {
+        std::cout << "Enter phone number: ";
+        std::getline(std::cin, this->PhoneNumber);
+    }
+    while (this->DarkestSecret.empty())
+    {
+        std::cout << "Enter darkest secret: ";
+        std::getline(std::cin, this->DarkestSecret);
+    }
 };
 
 std::string Contact::get_firstname() const

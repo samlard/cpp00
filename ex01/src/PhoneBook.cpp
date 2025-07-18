@@ -14,12 +14,12 @@
 
 PhoneBook::PhoneBook() : index(0)
 {
-    std::cout << "PhoneBook has been created with a capacity for 8 contacts." << std::endl;
+    // std::cout << "PhoneBook has been created with a capacity for 8 contacts." << std::endl;
 };
 
 PhoneBook::~PhoneBook()
 {
-    std::cout << "phonebook destructor called" << std::endl;
+    // std::cout << "phonebook destructor called" << std::endl;
 };
 
 
