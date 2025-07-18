@@ -34,7 +34,7 @@ int main(void)
         else if (std::string(input) == "ADD")
             phonebook.add_contact();
         else if (std::string(input) == "SEARCH")
-            phonebook.search_contacts(); // Assuming a search_contacts method exists
+            phonebook.search_contacts();
         else
             std::cout << "Unknown command: " << input << std::endl;
     }

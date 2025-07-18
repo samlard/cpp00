@@ -12,7 +12,7 @@
 
 #include "../include/PhoneBook.hpp"
 
-PhoneBook::PhoneBook() : index(0) // Initialize index to 0
+PhoneBook::PhoneBook() : index(0)
 {
     std::cout << "PhoneBook has been created with a capacity for 8 contacts." << std::endl;
 };

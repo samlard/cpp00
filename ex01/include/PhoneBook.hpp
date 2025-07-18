@@ -21,14 +21,14 @@ class PhoneBook
 {
     private:
         Contact registry[8];
-        int index; // Current index for adding contacts
+        int index;
 
     public:
         PhoneBook();
         ~PhoneBook();
-        void add_contact(); // Function to add a contact
-        int get_index(); // Function to get the current index
-        void search_contacts(); // Function to search for contacstd::cout << "===========================================" << std::endl;
+        void add_contact();
+        int get_index();
+        void search_contacts(); 
         std::string resize_string(const std::string str);
 };
 
