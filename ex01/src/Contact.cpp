@@ -30,26 +30,61 @@ void Contact::create_contact()
     {
         std::cout << "Enter first name: ";
         std::getline(std::cin, this->firstname);
+        if (std::cin.fail())
+	    {
+		    std::cin.clear();
+		    std::cin.ignore();
+		    std::cerr << "Exit failure : cin error" << std::endl;
+		    exit (1);
+	    }
     }
     while (this->lastname.empty())
     {
         std::cout << "Enter last name: ";
         std::getline(std::cin, this->lastname);
+        if (std::cin.fail())
+	    {
+		    std::cin.clear();
+		    std::cin.ignore();
+		    std::cerr << "Exit failure : cin error" << std::endl;
+		    exit (1);
+	    }
     }
     while (this->nickname.empty())
     {
         std::cout << "Enter nickname: ";
         std::getline(std::cin, this->nickname);
+        if (std::cin.fail())
+	    {
+		    std::cin.clear();
+		    std::cin.ignore();
+		    std::cerr << "Exit failure : cin error" << std::endl;
+		    exit (1);
+	    }
     }
     while (this->PhoneNumber.empty())
     {
         std::cout << "Enter phone number: ";
         std::getline(std::cin, this->PhoneNumber);
+        if (std::cin.fail())
+	    {
+		    std::cin.clear();
+		    std::cin.ignore();
+		    std::cerr << "Exit failure : cin error" << std::endl;
+		    exit (1);
+	    }
     }
     while (this->DarkestSecret.empty())
     {
         std::cout << "Enter darkest secret: ";
         std::getline(std::cin, this->DarkestSecret);
+        if (std::cin.fail())
+	    {
+		    std::cin.clear();
+		    std::cin.ignore();
+		    std::cerr << "Exit failure : cin error" << std::endl;
+		    exit (1);
+	    }
     }
 };
 
