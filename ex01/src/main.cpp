@@ -12,7 +12,6 @@
 
 #include "../include/Contact.hpp"
 #include "../include/PhoneBook.hpp"
-#include <string>
 
 int main(void)
 {
@@ -21,8 +20,15 @@ int main(void)
 
     while (1)
     {
-        std::cout << "Enter a command (ADD, EXIT, SEARCH): ";
+        std::cout << "Enter a command (ADD, EXIT, SEARCH):" << std::endl;
         getline(std::cin, input) && input != "EXIT";
+        if (std::cin.fail())
+	    {
+		    std::cin.clear();
+		    std::cin.ignore();
+		    std::cerr << "Exit failure : cin error" << std::endl;
+		    exit (1);
+	    }
         if (std::string(input) == "EXIT")
             break;
         else if (std::string(input) == "ADD")

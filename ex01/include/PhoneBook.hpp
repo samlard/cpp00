@@ -15,6 +15,7 @@
 #include "Contact.hpp"
 #include <iostream>
 #include <string>
+#include <cstdlib>
 
 class PhoneBook
 {
@@ -27,7 +28,8 @@ class PhoneBook
         ~PhoneBook();
         void add_contact(); // Function to add a contact
         int get_index(); // Function to get the current index
-        void search_contacts(); // Function to search for contacts
+        void search_contacts(); // Function to search for contacstd::cout << "===========================================" << std::endl;
+        std::string resize_string(const std::string str);
 };
 
 #endif

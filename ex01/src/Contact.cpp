@@ -12,6 +12,7 @@
 
 
 #include "../include/Contact.hpp"
+#include "../include/PhoneBook.hpp"
 
 Contact::Contact()
 {
@@ -25,18 +26,17 @@ Contact::~Contact()
 
 void Contact::create_contact()
 {
-    std::cout << "firstname = " << std::endl;
+    std::cout << "firstname = ";
     getline(std::cin, this->firstname);
-    std::cout << "lastname = " << std::endl;
+    std::cout << "lastname = ";
     getline(std::cin, this->lastname);
-    std::cout << "nickname = " << std::endl;
+    std::cout << "nickname = ";
     getline(std::cin, this->nickname);
-    std::cout << "PhoneNumber = " << std::endl;
+    std::cout << "PhoneNumber = ";
     getline(std::cin, this->PhoneNumber);
-    std::cout << "DarkestSecret = " << std::endl;
+    std::cout << "DarkestSecret = ";
     getline(std::cin, this->DarkestSecret);
     std::cout << "Contact created" << std::endl;
-
 };
 
 std::string Contact::get_firstname() const
@@ -54,12 +54,12 @@ std::string Contact::get_nickname() const
     return this->nickname;
 }
 
-// std::string Contact::get_firstname ()
-//     return this->firstname;
-// }
+std::string Contact::get_phone_number() const
+{
+    return this->PhoneNumber;
+}
 
-// void Contact::set_firstname(std::string firstname)
-// {
-//     this->firstname = firstname;
-// }
-
+std::string Contact::get_darkest_secret() const
+{
+    return this->DarkestSecret;
+}
