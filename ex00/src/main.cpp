@@ -6,7 +6,7 @@
 /*   By: ssoumill <ssoumill@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/07 18:20:19 by ssoumill          #+#    #+#             */
-/*   Updated: 2025/07/10 17:37:32 by ssoumill         ###   ########.fr       */
+/*   Updated: 2025/07/19 14:55:32 by ssoumill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,6 @@ int main(int argc, char **argv)
             std::cout << (char)std::toupper(argv[i][j]);
             j++;
         }
-        if (i != argc - 1)
-            std::cout << " ";
         i++;
     }
      std::cout << std::endl;
