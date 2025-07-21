@@ -26,7 +26,7 @@ int main(void)
 	    {
 		    std::cin.clear();
 		    std::cin.ignore();
-		    std::cerr << "Exit failure : cin error" << std::endl;
+		    std::cerr << std::endl <<"Exit failure : cin error" << std::endl;
 		    exit (1);
 	    }
         if (std::string(input) == "EXIT")

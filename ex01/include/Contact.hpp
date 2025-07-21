@@ -28,11 +28,11 @@ class Contact
         Contact();
         ~Contact();
        void create_contact();
-       std::string get_firstname() const;
-       std::string get_lastname() const;
-       std::string get_nickname() const;
-       std::string get_phone_number() const;
-       std::string get_darkest_secret() const;
+       const std::string &get_firstname() const;
+       const std::string &get_lastname() const;
+       const std::string &get_nickname() const;
+       const std::string &get_phone_number() const;
+       const std::string &get_darkest_secret() const;
 };
 
 #endif

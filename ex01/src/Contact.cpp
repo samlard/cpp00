@@ -88,27 +88,27 @@ void Contact::create_contact()
     }
 };
 
-std::string Contact::get_firstname() const
+const std::string &Contact::get_firstname() const
 {
     return this->firstname;
 }
 
-std::string Contact::get_lastname() const
+const std::string &Contact::get_lastname() const
 {
     return this->lastname;
 }
 
-std::string Contact::get_nickname() const
+const std::string &Contact::get_nickname() const
 {
     return this->nickname;
 }
 
-std::string Contact::get_phone_number() const
+const std::string &Contact::get_phone_number() const
 {
     return this->PhoneNumber;
 }
 
-std::string Contact::get_darkest_secret() const
+const std::string& Contact::get_darkest_secret() const
 {
     return this->DarkestSecret;
 }
